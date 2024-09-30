@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Grocery Receipt App</title>
+</head>
+<body>
+    <h1>Upload Your Grocery Receipt</h1>
+    <form id="receiptForm" enctype="multipart/form-data">
+        <input type="file" id="receipt" accept="image/*" required>
+        <button type="submit">Upload Receipt</button>
+    </form>
+    <p id="responseMessage"></p>
+    <img id="previewImage" style="display:none; max-width: 100%; height: auto;" alt="Receipt Preview">
+    <div id="extractedItems" style="margin-top: 20px;"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
